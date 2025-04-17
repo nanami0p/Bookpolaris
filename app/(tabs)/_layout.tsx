@@ -1,17 +1,8 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { colors } from '../../styles/colors';
+import { font } from '../../styles/font';
 
-import { HapticTab } from '../../components/HapticTab';
-import { IconSymbol } from '../../components/ui/IconSymbol';
-import TabBarBackground from '../../components/ui/TabBarBackground';
-
-import { Colors } from '../../constants/Colors'; // ← '@/constants/Colors' が通らない場合の修正
-import { useColorScheme } from '../../hooks/useColorScheme';
-
-import * as Font from 'expo-font';
-import AppLoading from 'expo-app-loading';
-import { customFonts } from '../../styles/font';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -24,16 +15,10 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            position: 'absolute',
-          },
-          default: {},
-        }),
+        tabBarStyle: {
+          position: 'absolute',
+        },        
       }}
     >
       <Tabs.Screen
