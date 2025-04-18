@@ -24,6 +24,5 @@ export const font = StyleSheet.create({
     fontSize14: { fontSize: 14, lineHeight: 21,},
     fontSize12: { fontSize: 12, lineHeight: 18,},
     fontSize10: { fontSize: 10, lineHeight: 15,},
-    numberText: { fontFamily: "latoRegular", },
     fontBold: { fontWeight: 'bold',},
 });

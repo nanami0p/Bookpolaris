@@ -46,7 +46,7 @@ const HomeScreen = () => {
                     <View style={styles.topSection01}>
                         <View style={[{ flexDirection: 'row', alignItems: 'flex-end' }, spacing.mb10,]}>
                             <Text style={[font.fontSize14, font.fontBold, { color: colors.white }]}>総読了冊数：</Text>
-                            <Text style={[font.numberText, styles.allBooks, { color: colors.white }]}>975</Text>
+                            <Text style={[styles.allBooks, { color: colors.white },{ fontFamily: 'latoBold' }]}>975</Text>
                             <Text style={[font.fontSize14, { color: colors.white }]}>冊</Text>
                         </View>
 
@@ -54,7 +54,7 @@ const HomeScreen = () => {
                         <Text style={[font.fontSize12, { color: colors.white }]}>かけらをつないで新たな星座を描こう。</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                             <Text style={[font.fontSize12, font.fontBold, { color: colors.white }]}>次の星座まであと25冊</Text>
-                            <Text style={[styles.progressLabel, font.numberText, font.fontBold, { color: colors.white }]}>975/1000</Text>
+                            <Text style={[styles.progressLabel, { color: colors.white },{ fontFamily: 'latoBold' }]}>975/1000</Text>
                         </View>
                         <ProgressBar progress={975 / 1000} style={styles.progress} />
                     </View>
@@ -218,16 +218,6 @@ const styles = StyleSheet.create({
         fontSize: 13,
         marginBottom: 10,
         lineHeight: 21,
-    },
-    cardButton: {
-        backgroundColor: '#4A90E2',
-        padding: 10,
-        borderRadius: 8,
-    },
-    cardButtonText: {
-        color: '#fff',
-        textAlign: 'center',
-        fontWeight: 'bold',
     },
 });
 
